@@ -2,6 +2,7 @@
 
 import rospy
 from rl_agent import rl_agent
+import map
 # from map import MapService
 import numpy as np
 import multiprocessing
@@ -23,9 +24,6 @@ class Env:
             agent_id=0,
             init_location=init_position_robot,
         )
-
-
-
 
     def learning(self):
         # to it parnell

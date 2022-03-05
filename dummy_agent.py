@@ -26,6 +26,7 @@ class dummy_agent:
         self.static_map = self.map_service.cost_map.copy()
         # self.map_service.show_point(self.static_map,init_location)
         self.static_map = self.map_service.change_map(self.static_map)
+
         locations = np.where(self.static_map == 0)
         self.locations_map = np.concatenate(([locations[0]], [locations[1]]), axis=0)
         self.locations_map = self.locations_map.transpose()
